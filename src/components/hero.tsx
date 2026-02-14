@@ -1,0 +1,54 @@
+"use client";
+
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export function Hero() {
+  return (
+    <section className="relative flex min-h-[90vh] items-center overflow-hidden">
+      {/* Background grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:64px_64px] opacity-20" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+
+      {/* Accent glow */}
+      <div className="absolute left-1/2 top-1/4 -translate-x-1/2 h-96 w-96 rounded-full bg-accent/10 blur-[128px]" />
+
+      <div className="relative mx-auto max-w-6xl px-6 py-32">
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="max-w-3xl"
+        >
+          <p className="mb-4 text-sm font-medium uppercase tracking-widest text-accent">
+            Web Development &mdash; Greater Toronto Area
+          </p>
+          <h1 className="text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
+            Websites that{" "}
+            <span className="text-accent">perform</span>,{" "}
+            built to{" "}
+            <span className="text-accent">convert</span>.
+          </h1>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+            We build fast, accessible, and modern websites for small businesses,
+            churches, and construction companies. No templates. No bloat. Just
+            results.
+          </p>
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <Button size="lg" asChild>
+              <Link href="/contact">
+                Get a Quote
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <Link href="#portfolio">See Our Work</Link>
+            </Button>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
