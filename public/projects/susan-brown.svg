@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#1f1f23"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <!-- Subtle grid -->
+  <line x1="0" y1="125" x2="800" y2="125" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="0" y1="250" x2="800" y2="250" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="0" y1="375" x2="800" y2="375" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="200" y1="0" x2="200" y2="500" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="400" y1="0" x2="400" y2="500" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="600" y1="0" x2="600" y2="500" stroke="#27272a" stroke-width="0.5"/>
+  <!-- Glow -->
+  <circle cx="400" cy="210" r="120" fill="#06b6d4" opacity="0.06"/>
+  <!-- Person silhouette - head -->
+  <circle cx="400" cy="175" r="22" fill="url(#accent)"/>
+  <!-- Person silhouette - body/shoulders -->
+  <path d="M360,230 Q360,205 380,200 Q390,197 400,197 Q410,197 420,200 Q440,205 440,230 L440,275 Q440,282 433,282 L367,282 Q360,282 360,275 Z" fill="url(#accent)" opacity="0.85"/>
+  <!-- Star accent beside person -->
+  <polygon points="340,180 344,190 355,190 346,197 350,208 340,201 330,208 334,197 325,190 336,190" fill="#06b6d4" opacity="0.5"/>
+  <polygon points="460,180 464,190 475,190 466,197 470,208 460,201 450,208 454,197 445,190 456,190" fill="#06b6d4" opacity="0.5"/>
+  <!-- Small decorative stars -->
+  <polygon points="320,160 322,166 328,166 323,170 325,176 320,172 315,176 317,170 312,166 318,166" fill="#06b6d4" opacity="0.3"/>
+  <polygon points="480,160 482,166 488,166 483,170 485,176 480,172 475,176 477,170 472,166 478,166" fill="#06b6d4" opacity="0.3"/>
+  <!-- Base line -->
+  <rect x="300" y="290" width="200" height="3" rx="1.5" fill="#06b6d4" opacity="0.3"/>
+  <!-- Decorative dots -->
+  <circle cx="310" cy="220" r="2" fill="#06b6d4" opacity="0.3"/>
+  <circle cx="490" cy="220" r="2" fill="#06b6d4" opacity="0.3"/>
+  <!-- Project name -->
+  <text x="400" y="370" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#ffffff" letter-spacing="2">Susan M. Brown</text>
+  <text x="400" y="400" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="14" fill="#71717a" letter-spacing="4">WEB PROJECT</text>
+  <!-- Corner accents -->
+  <path d="M20,20 L50,20 M20,20 L20,50" stroke="#06b6d4" stroke-width="2" opacity="0.3" fill="none"/>
+  <path d="M780,20 L750,20 M780,20 L780,50" stroke="#06b6d4" stroke-width="2" opacity="0.3" fill="none"/>
+  <path d="M20,480 L50,480 M20,480 L20,450" stroke="#06b6d4" stroke-width="2" opacity="0.3" fill="none"/>
+  <path d="M780,480 L750,480 M780,480 L780,450" stroke="#06b6d4" stroke-width="2" opacity="0.3" fill="none"/>
+</svg>

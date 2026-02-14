@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#1f1f23"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <!-- Subtle grid -->
+  <line x1="0" y1="125" x2="800" y2="125" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="0" y1="250" x2="800" y2="250" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="0" y1="375" x2="800" y2="375" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="200" y1="0" x2="200" y2="500" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="400" y1="0" x2="400" y2="500" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="600" y1="0" x2="600" y2="500" stroke="#27272a" stroke-width="0.5"/>
+  <!-- Glow -->
+  <circle cx="400" cy="200" r="120" fill="#f59e0b" opacity="0.06"/>
+  <!-- Building icon - three rectangles like skyscrapers -->
+  <rect x="345" y="180" width="40" height="110" rx="3" fill="url(#accent)"/>
+  <rect x="345" y="180" width="40" height="110" rx="3" fill="url(#accent)"/>
+  <!-- Windows on left building -->
+  <rect x="353" y="192" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="367" y="192" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="353" y="208" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="367" y="208" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="353" y="224" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="367" y="224" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <!-- Center tall building -->
+  <rect x="390" y="150" width="45" height="140" rx="3" fill="url(#accent)"/>
+  <rect x="399" y="162" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="416" y="162" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="399" y="178" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="416" y="178" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="399" y="194" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="416" y="194" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="399" y="210" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="416" y="210" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="399" y="226" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="416" y="226" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <!-- Right building -->
+  <rect x="440" y="200" width="38" height="90" rx="3" fill="url(#accent)"/>
+  <rect x="448" y="212" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="462" y="212" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="448" y="228" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="462" y="228" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="448" y="244" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <rect x="462" y="244" width="10" height="8" rx="1" fill="#18181b" opacity="0.5"/>
+  <!-- Ground line -->
+  <rect x="300" y="290" width="200" height="3" rx="1.5" fill="#f59e0b" opacity="0.3"/>
+  <!-- Decorative dots -->
+  <circle cx="310" cy="155" r="3" fill="#f59e0b" opacity="0.4"/>
+  <circle cx="490" cy="155" r="3" fill="#f59e0b" opacity="0.4"/>
+  <!-- Project name -->
+  <text x="400" y="370" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#ffffff" letter-spacing="2">Clayson Construction</text>
+  <text x="400" y="400" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="14" fill="#71717a" letter-spacing="4">WEB PROJECT</text>
+  <!-- Corner accents -->
+  <path d="M20,20 L50,20 M20,20 L20,50" stroke="#f59e0b" stroke-width="2" opacity="0.3" fill="none"/>
+  <path d="M780,20 L750,20 M780,20 L780,50" stroke="#f59e0b" stroke-width="2" opacity="0.3" fill="none"/>
+  <path d="M20,480 L50,480 M20,480 L20,450" stroke="#f59e0b" stroke-width="2" opacity="0.3" fill="none"/>
+  <path d="M780,480 L750,480 M780,480 L780,450" stroke="#f59e0b" stroke-width="2" opacity="0.3" fill="none"/>
+</svg>

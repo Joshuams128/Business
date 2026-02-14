@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#1f1f23"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <!-- Subtle grid -->
+  <line x1="0" y1="125" x2="800" y2="125" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="0" y1="250" x2="800" y2="250" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="0" y1="375" x2="800" y2="375" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="200" y1="0" x2="200" y2="500" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="400" y1="0" x2="400" y2="500" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="600" y1="0" x2="600" y2="500" stroke="#27272a" stroke-width="0.5"/>
+  <!-- Glow -->
+  <circle cx="400" cy="210" r="120" fill="#10b981" opacity="0.06"/>
+  <!-- Hammer/Build icon -->
+  <!-- Hammer head -->
+  <rect x="365" y="165" width="70" height="30" rx="5" fill="url(#accent)" transform="rotate(-30, 400, 180)"/>
+  <!-- Hammer handle -->
+  <rect x="393" y="185" width="14" height="90" rx="4" fill="url(#accent)" opacity="0.85" transform="rotate(-30, 400, 230)"/>
+  <!-- Small gear/cog shape for "build" theme -->
+  <circle cx="440" cy="240" r="18" stroke="#10b981" stroke-width="3" fill="none" opacity="0.5"/>
+  <circle cx="440" cy="240" r="8" fill="#10b981" opacity="0.4"/>
+  <!-- Gear teeth -->
+  <rect x="437" y="218" width="6" height="8" rx="1" fill="#10b981" opacity="0.5"/>
+  <rect x="437" y="258" width="6" height="8" rx="1" fill="#10b981" opacity="0.5"/>
+  <rect x="455" y="237" width="8" height="6" rx="1" fill="#10b981" opacity="0.5"/>
+  <rect x="417" y="237" width="8" height="6" rx="1" fill="#10b981" opacity="0.5"/>
+  <!-- Decorative dots -->
+  <circle cx="310" cy="170" r="3" fill="#10b981" opacity="0.4"/>
+  <circle cx="490" cy="170" r="3" fill="#10b981" opacity="0.4"/>
+  <circle cx="330" cy="270" r="2" fill="#10b981" opacity="0.3"/>
+  <circle cx="480" cy="150" r="2" fill="#10b981" opacity="0.3"/>
+  <!-- Base line -->
+  <rect x="300" y="290" width="200" height="3" rx="1.5" fill="#10b981" opacity="0.3"/>
+  <!-- Project name -->
+  <text x="400" y="370" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#ffffff" letter-spacing="2">Build With Dream</text>
+  <text x="400" y="400" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="14" fill="#71717a" letter-spacing="4">WEB PROJECT</text>
+  <!-- Corner accents -->
+  <path d="M20,20 L50,20 M20,20 L20,50" stroke="#10b981" stroke-width="2" opacity="0.3" fill="none"/>
+  <path d="M780,20 L750,20 M780,20 L780,50" stroke="#10b981" stroke-width="2" opacity="0.3" fill="none"/>
+  <path d="M20,480 L50,480 M20,480 L20,450" stroke="#10b981" stroke-width="2" opacity="0.3" fill="none"/>
+  <path d="M780,480 L750,480 M780,480 L780,450" stroke="#10b981" stroke-width="2" opacity="0.3" fill="none"/>
+</svg>

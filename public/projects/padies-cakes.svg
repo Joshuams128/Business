@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#1f1f23"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <!-- Subtle grid -->
+  <line x1="0" y1="125" x2="800" y2="125" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="0" y1="250" x2="800" y2="250" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="0" y1="375" x2="800" y2="375" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="200" y1="0" x2="200" y2="500" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="400" y1="0" x2="400" y2="500" stroke="#27272a" stroke-width="0.5"/>
+  <line x1="600" y1="0" x2="600" y2="500" stroke="#27272a" stroke-width="0.5"/>
+  <!-- Glow -->
+  <circle cx="400" cy="210" r="120" fill="#ec4899" opacity="0.06"/>
+  <!-- Cake shape - tiered cake -->
+  <!-- Bottom tier -->
+  <rect x="350" y="250" width="100" height="40" rx="6" fill="url(#accent)"/>
+  <!-- Middle tier -->
+  <rect x="362" y="215" width="76" height="38" rx="5" fill="url(#accent)" opacity="0.85"/>
+  <!-- Top tier -->
+  <rect x="376" y="183" width="48" height="35" rx="4" fill="url(#accent)" opacity="0.7"/>
+  <!-- Cherry/decoration on top -->
+  <circle cx="400" cy="175" r="10" fill="#ec4899"/>
+  <line x1="400" y1="175" x2="400" y2="162" stroke="#ec4899" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="400" cy="160" r="4" fill="#ec4899" opacity="0.7"/>
+  <!-- Frosting details -->
+  <path d="M350,252 Q362,244 375,252 Q388,260 400,252 Q412,244 425,252 Q438,260 450,252" stroke="#18181b" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <path d="M362,217 Q374,210 386,217 Q398,224 410,217 Q422,210 438,217" stroke="#18181b" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <!-- Decorative dots - like sprinkles -->
+  <circle cx="320" cy="200" r="2.5" fill="#ec4899" opacity="0.4"/>
+  <circle cx="480" cy="200" r="2.5" fill="#ec4899" opacity="0.4"/>
+  <circle cx="340" cy="170" r="2" fill="#ec4899" opacity="0.3"/>
+  <circle cx="460" cy="170" r="2" fill="#ec4899" opacity="0.3"/>
+  <circle cx="330" cy="240" r="2" fill="#ec4899" opacity="0.3"/>
+  <circle cx="470" cy="240" r="2" fill="#ec4899" opacity="0.3"/>
+  <!-- Base line -->
+  <rect x="300" y="295" width="200" height="3" rx="1.5" fill="#ec4899" opacity="0.3"/>
+  <!-- Project name -->
+  <text x="400" y="370" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#ffffff" letter-spacing="2">Padie's Cakes</text>
+  <text x="400" y="400" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="14" fill="#71717a" letter-spacing="4">WEB PROJECT</text>
+  <!-- Corner accents -->
+  <path d="M20,20 L50,20 M20,20 L20,50" stroke="#ec4899" stroke-width="2" opacity="0.3" fill="none"/>
+  <path d="M780,20 L750,20 M780,20 L780,50" stroke="#ec4899" stroke-width="2" opacity="0.3" fill="none"/>
+  <path d="M20,480 L50,480 M20,480 L20,450" stroke="#ec4899" stroke-width="2" opacity="0.3" fill="none"/>
+  <path d="M780,480 L750,480 M780,480 L780,450" stroke="#ec4899" stroke-width="2" opacity="0.3" fill="none"/>
+</svg>
