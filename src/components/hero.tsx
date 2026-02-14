@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button";
 export function Hero() {
   return (
     <section className="relative flex min-h-[90vh] items-center overflow-hidden">
+      {/* Hero background image */}
+      <div className="absolute inset-0 -z-10 bg-[url('/images/bg1.png')] bg-cover bg-center" />
       {/* Background grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:64px_64px] opacity-20" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
@@ -15,12 +17,12 @@ export function Hero() {
       {/* Accent glow */}
       <div className="absolute left-1/2 top-1/4 -translate-x-1/2 h-96 w-96 rounded-full bg-accent/10 blur-[128px]" />
 
-      <div className="relative mx-auto max-w-6xl px-6 py-32">
+      <div className="relative max-w-6xl px-6 py-32 flex justify-start">
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="max-w-3xl"
+          className="max-w-3xl text-left"
         >
           <p className="mb-4 text-sm font-medium uppercase tracking-widest text-accent">
             Web Development &mdash; Greater Toronto Area
