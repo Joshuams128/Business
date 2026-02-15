@@ -6,7 +6,19 @@ import { Section, SectionHeader } from "@/components/section";
 import { projects } from "@/lib/data";
 
 export function PortfolioPreview() {
-  const featured = projects.slice(0, 4);
+  // Filter out projects to be removed from home page
+  const removedTitles = [
+    "Clayson Construction",
+    "Build With Dream",
+    "Susan M. Brown",
+    "Construction",
+    "Build With Dream",
+    "Susan M. Brown"
+  ];
+  const filteredProjects = projects.filter(
+    (project) => !removedTitles.includes(project.title)
+  );
+  const featured = filteredProjects.slice(0, 4);
 
   return (
     <Section id="portfolio">
@@ -60,7 +72,7 @@ export function PortfolioPreview() {
 
       {/* Show remaining projects in a compact row */}
       <div className="mt-8 grid gap-4 sm:grid-cols-2">
-        {projects.slice(4).map((project) => (
+        {filteredProjects.slice(4).map((project) => (
           <div
             key={project.title}
             className="flex items-center gap-4 rounded-xl border border-border/50 bg-card p-4 transition-all duration-300 hover:border-accent/30"
