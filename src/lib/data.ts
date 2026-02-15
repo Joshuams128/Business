@@ -49,28 +49,35 @@ export const services = [
 
 export const projects = [
   {
+    title: "Serene Pilates",
+    description: "Elegant wellness studio site with class scheduling and instructor profiles.",
+    category: "Wellness",
+    image: "/images/serene.png",
+    link: "https://www.serenepilates.ca/",
+  },
+  {
+    title: "Scarborough's Premier Event Rental Service",
+    description: "Scarborough's Premier Event Rental Service.",
+    category: "Events",
+    image: "/images/tnparty.png",
+  },
+  {
+    title: "Dream Builders",
+    description: "Renovations, built around your vision.",
+    category: "Construction",
+    image: "/images/dreamb.png",
+  },
+  {
     title: "TDC Church",
     description: "Modern church website with event management and sermon archives.",
     category: "Church",
-    image: "/projects/tdc-church.svg",
+    image: "/images/tdcimg.png",
   },
   {
     title: "Clayson Construction",
     description: "Professional construction company site showcasing projects and services.",
     category: "Construction",
     image: "/projects/clayson-construction.svg",
-  },
-  {
-    title: "Serene Pilates",
-    description: "Elegant wellness studio site with class scheduling and instructor profiles.",
-    category: "Wellness",
-    image: "/projects/serene-pilates.svg",
-  },
-  {
-    title: "Padie's Cakes",
-    description: "Beautiful bakery website with gallery and custom order functionality.",
-    category: "Small Business",
-    image: "/projects/padies-cakes.svg",
   },
   {
     title: "Build With Dream",
@@ -109,6 +116,7 @@ export const testimonials = [
 
 export const navLinks = [
   { href: "/", label: "Home" },
+  { href: "/our-work", label: "Our Work" },
   { href: "/services", label: "Services" },
   { href: "/contact", label: "Contact" },
 ];

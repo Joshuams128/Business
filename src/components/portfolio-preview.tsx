@@ -35,7 +35,19 @@ export function PortfolioPreview() {
                 <span className="text-xs font-medium uppercase tracking-wider text-accent">
                   {project.category}
                 </span>
-                <ExternalLink className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-accent" />
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-accent hover:underline"
+                    aria-label={`Visit ${project.title} website`}
+                  >
+                    <ExternalLink className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-accent" />
+                  </a>
+                ) : (
+                  <ExternalLink className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-accent" />
+                )}
               </div>
               <h3 className="text-lg font-semibold">{project.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">
