@@ -19,7 +19,7 @@ export const services = [
       "SEO optimization & metadata",
       "Performance & accessibility audit",
     ],
-    cta: "Starting at $1,500",
+    cta: "Get a Quote",
   },
   {
     title: "Website Edits & Updates",
@@ -31,7 +31,7 @@ export const services = [
       "New pages or sections",
       "Performance improvements",
     ],
-    cta: "Starting at $300",
+    cta: "Get a Quote",
   },
   {
     title: "Website Rebuilds & Migrations",
@@ -43,7 +43,7 @@ export const services = [
       "Content transfer & SEO preservation",
       "Modern tech stack upgrade",
     ],
-    cta: "Starting at $2,000",
+    cta: "Get a Quote",
   },
 ];
 
@@ -66,24 +66,21 @@ export const projects = [
     description: "Renovations, built around your vision.",
     category: "Construction",
     image: "/images/dreamb.png",
+    link: "https://www.buildwithdream.com/",
   },
   {
-    title: "TDC Church",
+    title: "TDChurch",
     description: "Modern church website with event management and sermon archives.",
     category: "Church",
     image: "/images/tdcimg.png",
-  },
-  {
-    title: "Clayson Construction",
-    description: "Professional construction company site showcasing projects and services.",
-    category: "Construction",
-    image: "/projects/clayson-construction.svg",
+    link: "https://www.tdchurch.ca/",
   },
   {
     title: "Build With Dream",
     description: "Construction and development company with portfolio and project tracking.",
     category: "Construction",
     image: "/projects/build-with-dream.svg",
+    link: "https://www.buildwithdream.com/",
   },
   {
     title: "Susan M. Brown",

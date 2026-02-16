@@ -12,7 +12,6 @@ export function PortfolioPreview() {
     "Build With Dream",
     "Susan M. Brown",
     "Construction",
-    "Build With Dream",
     "Susan M. Brown"
   ];
   const filteredProjects = projects.filter(
@@ -28,46 +27,67 @@ export function PortfolioPreview() {
         description="From church communities to construction companies, we build sites that work as hard as you do."
       />
       <div className="grid gap-6 sm:grid-cols-2">
-        {featured.map((project) => (
-          <div
-            key={project.title}
-            className="group relative overflow-hidden rounded-xl border border-border/50 bg-card transition-all duration-300 hover:border-accent/30"
-          >
-            <div className="relative aspect-video overflow-hidden">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60" />
-            </div>
-            <div className="p-6">
-              <div className="mb-2 flex items-center justify-between">
-                <span className="text-xs font-medium uppercase tracking-wider text-accent">
-                  {project.category}
-                </span>
-                {project.link ? (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-accent hover:underline"
-                    aria-label={`Visit ${project.title} website`}
-                  >
-                    <ExternalLink className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-accent" />
-                  </a>
-                ) : (
-                  <ExternalLink className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-accent" />
-                )}
+        {featured.map((project) =>
+          project.link ? (
+            <a
+              key={project.title}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative overflow-hidden rounded-xl border border-border/50 bg-card transition-all duration-300 hover:border-accent/30"
+              aria-label={`Visit ${project.title} website`}
+            >
+              <div className="relative aspect-video overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60" />
               </div>
-              <h3 className="text-lg font-semibold">{project.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                {project.description}
-              </p>
+              <div className="p-6">
+                <div className="mb-2 flex items-center justify-between">
+                  <span className="text-xs font-medium uppercase tracking-wider text-accent">
+                    {project.category}
+                  </span>
+                  <ExternalLink className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-accent" />
+                </div>
+                <h3 className="text-lg font-semibold">{project.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  {project.description}
+                </p>
+              </div>
+            </a>
+          ) : (
+            <div
+              key={project.title}
+              className="group relative overflow-hidden rounded-xl border border-border/50 bg-card transition-all duration-300 hover:border-accent/30"
+            >
+              <div className="relative aspect-video overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60" />
+              </div>
+              <div className="p-6">
+                <div className="mb-2 flex items-center justify-between">
+                  <span className="text-xs font-medium uppercase tracking-wider text-accent">
+                    {project.category}
+                  </span>
+                  <ExternalLink className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-accent" />
+                </div>
+                <h3 className="text-lg font-semibold">{project.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  {project.description}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        )}
       </div>
 
       {/* Show remaining projects in a compact row */}
@@ -93,6 +113,14 @@ export function PortfolioPreview() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-center mt-8">
+        <a
+          href="/our-work"
+          className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors"
+        >
+          View All
+        </a>
       </div>
     </Section>
   );
