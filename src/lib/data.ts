@@ -4,7 +4,7 @@ export const siteConfig = {
   description:
     "Professional web development for small businesses, churches, and construction companies in the Greater Toronto Area. We prioritize performance, speed, and accessibility in every build.",
   url: "https://mjscott.ca",
-  email: "hello@mjscott.ca",
+  email: "Joshuams128@gmail.com",
   location: "Greater Toronto Area, Ontario",
 };
 
@@ -95,7 +95,7 @@ export const testimonials = [
     quote:
       "MJ Scott transformed our online presence. Our new website loads faster, looks incredible, and our congregation loves it.",
     author: "Pastor David",
-    company: "TDC Church",
+    company: "TDChurch",
   },
   {
     quote:

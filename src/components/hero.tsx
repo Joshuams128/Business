@@ -4,12 +4,23 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export function Hero() {
   return (
     <section className="relative flex min-h-[90vh] items-center overflow-hidden">
-      {/* Hero background image */}
-      <div className="absolute inset-0 -z-10 bg-[url('/images/bg1.png')] bg-cover bg-center" />
+      {/* Hero background image optimized with Next.js Image */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/images/bg1.png"
+          alt="Background texture"
+          fill
+          priority
+          placeholder="blur"
+          blurDataURL="/images/bg1.png" // You can replace with a real blurDataURL if available
+          className="object-cover object-center"
+        />
+      </div>
       {/* Background grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:64px_64px] opacity-20" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
