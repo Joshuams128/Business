@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
 import { Section, SectionHeader } from "@/components/section";
 import { projects } from "@/lib/data";
 
