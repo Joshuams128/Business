@@ -60,6 +60,7 @@ export const projects = [
     description: "Scarborough's Premier Event Rental Service.",
     category: "Events",
     image: "/images/tnparty.png",
+    link: "https://tn-party-rental.vercel.app/",
   },
   {
     title: "Dream Builders",
@@ -87,6 +88,13 @@ export const projects = [
     description: "Professional personal brand website with portfolio and contact integration.",
     category: "Personal Brand",
     image: "/projects/susan-brown.svg",
+  },
+  {
+    title: "Clayson Construction",
+    description: "Professional, responsive, and delivered exactly what we needed. Our site now truly represents the quality of our work.",
+    category: "Construction",
+    image: "/images/clayson.png",
+    link: "#", // Add actual link if available
   },
 ];
 

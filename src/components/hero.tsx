@@ -12,12 +12,12 @@ export function Hero() {
       {/* Hero background image optimized with Next.js Image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/bg1.png"
+          src="/images/herob.png"
           alt="Background texture"
           fill
           priority
-          placeholder="blur"
-          blurDataURL="/images/bg1.png" // You can replace with a real blurDataURL if available
+          sizes="100vw"
+          quality={75}
           className="object-cover object-center"
         />
       </div>
@@ -28,22 +28,22 @@ export function Hero() {
       {/* Accent glow */}
       <div className="absolute left-1/2 top-1/4 -translate-x-1/2 h-96 w-96 rounded-full bg-accent/10 blur-[128px]" />
 
-      <div className="relative max-w-6xl px-6 py-32 flex justify-start">
+      <div className="relative max-w-6xl px-6 py-32 flex justify-center items-center w-full">
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="max-w-3xl text-left"
+          className="max-w-3xl text-center"
         >
-          <h1 className="text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
+          <h1 className="text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl mx-auto">
             Websites that <span className="text-accent">Perform</span>, built <span className="text-accent">Fast</span>.
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-white md:text-xl">
+          <p className="mt-6 max-w-xl mx-auto text-lg leading-relaxed text-white md:text-xl">
             We build fast, accessible, and modern websites for businesses and organizations
             of all kinds.
              No templates. No bloat. Just results.
           </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row justify-center">
             <Button size="lg" asChild>
               <Link href="/contact">
                 Get a Quote

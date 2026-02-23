@@ -21,6 +21,7 @@ export function Navigation() {
             alt={siteConfig.name}
             width={300}
             height={300}
+            priority
             className="h-12 w-auto"
           />
         </Link>

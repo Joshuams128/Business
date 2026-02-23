@@ -1,9 +1,19 @@
 
 import { Hero } from "@/components/hero";
 import { WhyUs } from "@/components/why-us";
-import { PortfolioPreview } from "@/components/portfolio-preview";
+import dynamic from "next/dynamic";
+
+// Dynamically import components that appear below the fold
+const PortfolioPreview = dynamic(
+  () => import("@/components/portfolio-preview").then(mod => ({ default: mod.PortfolioPreview })),
+  { loading: () => null }
+);
+
+const CTASection = dynamic(
+  () => import("@/components/cta-section").then(mod => ({ default: mod.CTASection })),
+  { loading: () => null }
+);
 // import { Testimonials } from "@/components/testimonials";
-import { CTASection } from "@/components/cta-section";
 
 export default function Home() {
   return (

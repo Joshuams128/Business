@@ -17,7 +17,13 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
     <main className="container mx-auto py-12 max-w-2xl">
       <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
       <div className="relative w-full aspect-video mb-6 rounded-xl overflow-hidden border border-border/50">
-        <Image src={project.image} alt={project.title} fill className="object-cover" />
+        <Image 
+          src={project.image} 
+          alt={project.title} 
+          fill 
+          sizes="(max-width: 768px) 100vw, 600px"
+          className="object-cover" 
+        />
       </div>
       <div className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Objective</h2>

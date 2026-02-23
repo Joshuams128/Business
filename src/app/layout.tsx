@@ -66,6 +66,11 @@ export const metadata: Metadata = {
     shortcut: "/images/android-chrome-512x512.png",
     apple: "/images/android-chrome-512x512.png",
   },
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 };
 
 export default function RootLayout({
@@ -76,8 +81,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="icon" type="image/png" href="/images/android-chrome-512x512.png" />
-        <link rel="preload" as="image" href="/images/bg1.png" />
+        <link rel="preload" as="image" href="/images/herob.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
