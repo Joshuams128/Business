@@ -7,9 +7,10 @@ interface SectionProps {
   children: React.ReactNode;
   className?: string;
   id?: string;
+  fullWidth?: boolean;
 }
 
-export function Section({ children, className, id }: SectionProps) {
+export function Section({ children, className, id, fullWidth }: SectionProps) {
   return (
     <motion.section
       id={id}
@@ -19,7 +20,7 @@ export function Section({ children, className, id }: SectionProps) {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={cn("py-20 md:py-28", className)}
     >
-      <div className="mx-auto max-w-6xl px-6">{children}</div>
+      <div className={cn("mx-auto px-6", fullWidth ? "w-full" : "max-w-6xl")}>{children}</div>
     </motion.section>
   );
 }

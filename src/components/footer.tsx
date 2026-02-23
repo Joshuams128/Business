@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, MapPin } from "lucide-react";
 import { siteConfig, navLinks } from "@/lib/data";
 
@@ -9,9 +10,14 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <Link href="/" className="text-lg font-bold tracking-tight">
-              {siteConfig.name}
-              <span className="text-accent">.</span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/logo.png"
+                alt={siteConfig.name}
+                width={300}
+                height={300}
+                className="h-12 w-auto"
+              />
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               Professional web development for small businesses, churches, and

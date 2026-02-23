@@ -19,8 +19,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "NexSites | Web Development",
-    template: "%s | NexSites",
+    default: "AcerSites | Web Development",
+    template: "%s | AcerSites",
   },
   description:
     "Professional web development for small businesses, churches, and construction companies in the Greater Toronto Area. We prioritize performance, speed, and accessibility in every build.",
@@ -33,21 +33,21 @@ export const metadata: Metadata = {
     "church website",
     "construction website",
     "Next.js",
-    "NexSites",
+    "AcerSites",
   ],
-  authors: [{ name: "NexSites" }],
-  creator: "NexSites",
+  authors: [{ name: "AcerSites" }],
+  creator: "AcerSites",
   openGraph: {
     type: "website",
     locale: "en_CA",
-    siteName: "NexSites",
-    title: "NexSites | Web Development",
+    siteName: "AcerSites",
+    title: "AcerSites | Web Development",
     description:
       "Professional web development for small businesses, churches, and construction companies. Performance, speed, and accessibility in every build.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "NexSites",
+    title: "AcerSites",
     description:
       "Professional web development for small businesses, churches, and construction companies in the GTA.",
   },
