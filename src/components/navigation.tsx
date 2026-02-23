@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { navLinks, siteConfig } from "@/lib/data";
@@ -13,10 +14,15 @@ export function Navigation() {
 
   return (
     <header className="fixed top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-md">
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="text-lg font-bold tracking-tight">
-          {siteConfig.name}
-          <span className="text-accent">.</span>
+      <nav className="mx-auto flex h-24 max-w-6xl items-center justify-between px-6">
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/logo.png"
+            alt={siteConfig.name}
+            width={300}
+            height={300}
+            className="h-12 w-auto"
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -29,7 +35,7 @@ export function Navigation() {
                   "text-sm font-medium transition-colors hover:text-accent",
                   pathname === link.href
                     ? "text-accent"
-                    : "text-muted-foreground"
+                    : "text-white"
                 )}
               >
                 {link.label}
@@ -73,7 +79,7 @@ export function Navigation() {
                     "text-base font-medium transition-colors hover:text-accent",
                     pathname === link.href
                       ? "text-accent"
-                      : "text-muted-foreground"
+                      : "text-white"
                   )}
                 >
                   {link.label}

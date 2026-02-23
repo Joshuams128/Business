@@ -19,8 +19,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "MJ Scott Web Development | Greater Toronto Area",
-    template: "%s | MJ Scott Web Development",
+    default: "NexSites | Web Development",
+    template: "%s | NexSites",
   },
   description:
     "Professional web development for small businesses, churches, and construction companies in the Greater Toronto Area. We prioritize performance, speed, and accessibility in every build.",
@@ -33,27 +33,38 @@ export const metadata: Metadata = {
     "church website",
     "construction website",
     "Next.js",
-    "MJ Scott",
+    "NexSites",
   ],
-  authors: [{ name: "MJ Scott" }],
-  creator: "MJ Scott",
+  authors: [{ name: "NexSites" }],
+  creator: "NexSites",
   openGraph: {
     type: "website",
     locale: "en_CA",
-    siteName: "MJ Scott Web Development",
-    title: "MJ Scott Web Development | Greater Toronto Area",
+    siteName: "NexSites",
+    title: "NexSites | Web Development",
     description:
       "Professional web development for small businesses, churches, and construction companies. Performance, speed, and accessibility in every build.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "MJ Scott Web Development",
+    title: "NexSites",
     description:
       "Professional web development for small businesses, churches, and construction companies in the GTA.",
   },
   robots: {
     index: true,
     follow: true,
+  },
+  icons: {
+    icon: [
+      {
+        rel: "icon",
+        url: "/images/logo.png",
+        type: "image/png",
+      }
+    ],
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
   },
 };
 
@@ -65,6 +76,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="icon" type="image/png" href="/images/logo.png" />
         <link rel="preload" as="image" href="/images/bg1.png" />
       </head>
       <body

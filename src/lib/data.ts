@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: "MJ Scott",
-  title: "MJ Scott Web Development",
+  name: "NexSites",
+  title: "NexSites",
   description:
     "Professional web development for small businesses, churches, and construction companies in the Greater Toronto Area. We prioritize performance, speed, and accessibility in every build.",
   url: "https://mjscott.ca",
