@@ -3,11 +3,6 @@
   "devCommand": "next dev",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "env": {
-    "NEXT_PUBLIC_SITE_URL": {
-      "description": "The public site URL (auto-configured by Vercel)"
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
