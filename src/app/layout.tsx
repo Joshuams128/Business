@@ -59,12 +59,12 @@ export const metadata: Metadata = {
     icon: [
       {
         rel: "icon",
-        url: "/images/logo.png",
+        url: "/images/android-chrome-512x512.png",
         type: "image/png",
       }
     ],
-    shortcut: "/images/logo.png",
-    apple: "/images/logo.png",
+    shortcut: "/images/android-chrome-512x512.png",
+    apple: "/images/android-chrome-512x512.png",
   },
 };
 
@@ -76,7 +76,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" type="image/png" href="/images/logo.png" />
+        <link rel="icon" type="image/png" href="/images/android-chrome-512x512.png" />
         <link rel="preload" as="image" href="/images/bg1.png" />
       </head>
       <body
