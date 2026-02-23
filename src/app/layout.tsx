@@ -84,7 +84,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="icon" type="image/png" href="/images/android-chrome-512x512.png" />
-        <link rel="preload" as="image" href="/images/herob.png" />
+        <link rel="preload" as="image" href="/images/hero11.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}

@@ -12,7 +12,7 @@ export function Hero() {
       {/* Hero background image optimized with Next.js Image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/herob.png"
+          src="/images/hero11.png"
           alt="Background texture"
           fill
           priority
@@ -21,8 +21,6 @@ export function Hero() {
           className="object-cover object-center"
         />
       </div>
-      {/* Background grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:64px_64px] opacity-20" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
 
       {/* Accent glow */}
@@ -30,9 +28,9 @@ export function Hero() {
 
       <div className="relative max-w-6xl px-6 py-32 flex justify-center items-center w-full">
         <motion.div
-          initial={{ opacity: 0, y: 32 }}
+          initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
           className="max-w-3xl text-center"
         >
           <h1 className="text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl mx-auto">
