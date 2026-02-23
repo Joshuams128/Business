@@ -10,6 +10,9 @@ const nextConfig = {
   compress: true,
   swcMinify: true,
   poweredByHeader: false,
+  experimental: {
+    optimizePackageImports: ["@radix-ui/react-label", "@radix-ui/react-select", "@radix-ui/react-slot"],
+  },
   headers: async () => {
     return [
       {
