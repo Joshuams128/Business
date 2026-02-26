@@ -35,7 +35,13 @@ export function SectionHeader({
   description?: string;
 }) {
   return (
-    <div className="mb-14 max-w-2xl">
+    <motion.div 
+      className="mb-14 max-w-2xl"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.5 }}
+    >
       {label && (
         <p className="mb-3 text-sm font-medium uppercase tracking-wider text-accent">
           {label}
@@ -47,6 +53,6 @@ export function SectionHeader({
           {description}
         </p>
       )}
-    </div>
+    </motion.div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Send } from "lucide-react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,18 +17,60 @@ import {
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // Placeholder: replace with Resend API or your preferred email service
+    setLoading(true);
+    setError(null);
+
     const formData = new FormData(e.currentTarget);
-    console.log("Form submitted:", Object.fromEntries(formData));
-    setSubmitted(true);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      service: formData.get("service"),
+      details: formData.get("details"),
+    };
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          typeof result.error === "string"
+            ? result.error
+            : "Failed to send email"
+        );
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      const errorMsg =
+        err instanceof Error ? err.message : "An error occurred. Please try again.";
+      setError(errorMsg);
+      console.error("Form error:", err);
+    } finally {
+      setLoading(false);
+    }
   }
 
   if (submitted) {
     return (
-      <div className="rounded-xl border border-accent/30 bg-accent/5 p-12 text-center">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="rounded-xl border border-accent/30 bg-accent/5 p-12 text-center"
+      >
         <div className="mb-4 flex justify-center">
           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/10">
             <Send className="h-8 w-8 text-accent" />
@@ -37,12 +80,25 @@ export function ContactForm() {
         <p className="mt-2 text-muted-foreground">
           Thanks for reaching out. We&apos;ll get back to you within 24 hours.
         </p>
-      </div>
+      </motion.div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <motion.form 
+      onSubmit={handleSubmit} 
+      className="space-y-6"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      {error && (
+        <div className="rounded-lg border border-red-500/30 bg-red-500/10 p-4 text-sm text-red-500">
+          {error}
+        </div>
+      )}
+      
       <div className="grid gap-6 sm:grid-cols-2">
         <div className="space-y-2">
           <Label htmlFor="name">Name</Label>
@@ -65,36 +121,18 @@ export function ContactForm() {
         </div>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2">
-        <div className="space-y-2">
-          <Label htmlFor="service">Service Type</Label>
-          <Select name="service" required>
-            <SelectTrigger>
-              <SelectValue placeholder="Select a service" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="new-build">New Website Build</SelectItem>
-              <SelectItem value="edit">Website Edit / Update</SelectItem>
-              <SelectItem value="rebuild">Website Rebuild / Migration</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="budget">
-            Budget Range <span className="text-muted-foreground">(optional)</span>
-          </Label>
-          <Select name="budget">
-            <SelectTrigger>
-              <SelectValue placeholder="Select a range" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="under-1k">Under $1,000</SelectItem>
-              <SelectItem value="1k-3k">$1,000 - $3,000</SelectItem>
-              <SelectItem value="3k-5k">$3,000 - $5,000</SelectItem>
-              <SelectItem value="5k-plus">$5,000+</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
+      <div className="space-y-2">
+        <Label htmlFor="service">Service Type</Label>
+        <Select name="service" required>
+          <SelectTrigger>
+            <SelectValue placeholder="Select a service" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="new-build">New Website Build</SelectItem>
+            <SelectItem value="edit">Website Edit / Update</SelectItem>
+            <SelectItem value="rebuild">Website Rebuild / Migration</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
 
       <div className="space-y-2">
@@ -107,10 +145,10 @@ export function ContactForm() {
         />
       </div>
 
-      <Button type="submit" size="lg" className="w-full sm:w-auto">
-        Send Message
+      <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={loading}>
+        {loading ? "Sending..." : "Send Message"}
         <Send className="ml-2 h-4 w-4" />
       </Button>
-    </form>
+    </motion.form>
   );
 }

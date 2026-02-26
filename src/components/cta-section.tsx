@@ -2,13 +2,20 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/section";
 
 export function CTASection() {
   return (
     <Section>
-      <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-card px-8 py-16 text-center md:px-16">
+      <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      className="relative overflow-hidden rounded-2xl border border-border/50 bg-card px-8 py-16 text-center md:px-16"
+    >
         {/* Accent glow */}
         <div className="absolute left-1/2 top-0 -translate-x-1/2 h-48 w-48 rounded-full bg-accent/15 blur-[80px]" />
 
@@ -32,7 +39,7 @@ export function CTASection() {
             </Button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Section>
   );
 }

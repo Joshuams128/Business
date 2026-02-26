@@ -56,11 +56,12 @@ export const projects = [
     link: "https://www.serenepilates.ca/",
   },
   {
-    title: "Scarborough's Premier Event Rental Service",
-    description: "Scarborough's Premier Event Rental Service.",
+    title: "True North Party Rentals",
+    description: "Premium event rental service offering party supplies and equipment for all occasions.",
     category: "Events",
     image: "/images/tnparty.png",
     link: "https://tn-party-rental.vercel.app/",
+    comingSoon: true,
   },
   {
     title: "Dream Builders",
@@ -77,17 +78,11 @@ export const projects = [
     link: "https://www.tdchurch.ca/",
   },
   {
-    title: "Build With Dream",
-    description: "Construction and development company with portfolio and project tracking.",
-    category: "Construction",
-    image: "/projects/build-with-dream.svg",
-    link: "https://www.buildwithdream.com/",
-  },
-  {
     title: "Susan M. Brown",
     description: "Professional personal brand website with portfolio and contact integration.",
     category: "Personal Brand",
-    image: "/projects/susan-brown.svg",
+    image: "/images/susan.png",
+    link: "https://www.susanmbrown.com/",
   },
   {
     title: "Clayson Construction",

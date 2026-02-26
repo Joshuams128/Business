@@ -26,7 +26,7 @@ export function Hero() {
       {/* Accent glow */}
       <div className="absolute left-1/2 top-1/4 -translate-x-1/2 h-96 w-96 rounded-full bg-accent/10 blur-[128px]" />
 
-      <div className="relative max-w-6xl px-6 py-32 flex justify-center items-center w-full">
+      <div className="relative w-full px-6 py-32 flex justify-center items-center">
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
@@ -34,12 +34,10 @@ export function Hero() {
           className="max-w-3xl text-center"
         >
           <h1 className="text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl mx-auto">
-            Websites that <span className="text-accent">Perform</span>, built <span className="text-accent">Fast</span>.
+            High-<span className="text-accent">Performance</span> Sites, Built <span className="text-accent">Fast</span>
           </h1>
           <p className="mt-6 max-w-xl mx-auto text-lg leading-relaxed text-white md:text-xl">
-            We build fast, accessible, and modern websites for businesses and organizations
-            of all kinds.
-             No templates. No bloat. Just results.
+            We build sites to elevate and convert your business. Fast, accessible, and truly modern—designed for growth.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row justify-center">
             <Button size="lg" asChild>
