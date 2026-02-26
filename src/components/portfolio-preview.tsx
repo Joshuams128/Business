@@ -24,7 +24,7 @@ export function PortfolioPreview() {
     className?: string;
     isFeatured?: boolean;
   }) => {
-    const isComingSoon = (project as any).comingSoon;
+    const isComingSoon = 'comingSoon' in project && project.comingSoon;
     
     return (
       <motion.div
